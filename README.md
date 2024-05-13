@@ -19,9 +19,9 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
 3. Create an **Azure Logic App** (consumption tier)
     - Set up a recurring trigger every 5 seconds
     - Add an HTTP GET action to the following URL: https://api.wheretheiss.at/v1/satellites/25544
-    - Add a Send to Event Hub action and fill in the name + connection string
+    - Add a Send to Event Hub action and fill in the name + connection string. Make sure to send the body of the HTTP Get action as the event payload.
 4. Validate in Microsoft Fabric that data starts to show up in the **Data preview**
-5. Create a new **KQL Database** in Microsoft Fabric.
+5. Create a new **KQL Database** (or EventSource - in preview) in Microsoft Fabric.
 6. Go back to the Event Stream and add the KQL Database as a **Destination**.
     - Create a new table
 7. Wait for the ingestion to start.
