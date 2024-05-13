@@ -13,7 +13,7 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
 ## Set up the resources
 
 1. Create a **Workspace** in Microsoft Fabric. Use Fabric TRIAL or your existing Fabric tenant
-2. Create an **Event Stream**. 
+2. Create an **Eventstream**. 
     - Source: **Custom App**
     - Fetch the **EventHub name** and **Primary Connection String**
 3. Create an **Azure Logic App** (consumption tier)
@@ -21,7 +21,7 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
     - Add an HTTP GET action to the following URL: https://api.wheretheiss.at/v1/satellites/25544
     - Add a Send to Event Hub action and fill in the name + connection string. Make sure to send the body of the HTTP Get action as the event payload.
 4. Validate in Microsoft Fabric that data starts to show up in the **Data preview**
-5. Create a new **KQL Database** (or EventSource - in preview) in Microsoft Fabric.
+5. Create a new **KQL Database** (or Eventhouse - in preview) in Microsoft Fabric.
 6. Go back to the Event Stream and add the KQL Database as a **Destination**.
     - Create a new table
 7. Wait for the ingestion to start.
