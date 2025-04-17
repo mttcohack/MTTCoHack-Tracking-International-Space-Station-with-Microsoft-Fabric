@@ -12,10 +12,8 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
 
 ## Set up the resources
 
-1. Create a **Workspace** in Microsoft Fabric. Use Fabric TRIAL or your existing Fabric tenant
-2. Create an **Eventstream**. 
-    - Source: **Custom App**
-    - Fetch the **EventHub name** and **Primary Connection String**
+<img width="1184" alt="Drawing" src="https://github.com/user-attachments/assets/ca2b0cd8-66a5-4637-bcc4-71e5cd4490e1" />
+
 3. Create an **Azure Logic App** (consumption tier)
     - Set up a recurring trigger every 5 seconds
     - Add an HTTP GET action to the following URL: https://api.wheretheiss.at/v1/satellites/25544
