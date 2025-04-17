@@ -14,15 +14,14 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
 
 <img width="1184" alt="Drawing" src="https://github.com/user-attachments/assets/ca2b0cd8-66a5-4637-bcc4-71e5cd4490e1" />
 
-3. Create an **Azure Logic App** (consumption tier)
-    - Set up a recurring trigger every 5 seconds
+1. **Azure Logic App** (consumption tier)
+    - Set up a recurring trigger every 10 seconds
     - Add an HTTP GET action to the following URL: https://api.wheretheiss.at/v1/satellites/25544
     - Add a Send to Event Hub action and fill in the name + connection string. Make sure to send the body of the HTTP Get action as the event payload.
-4. Validate in Microsoft Fabric that data starts to show up in the **Data preview**
-5. Create a new **KQL Database** (or Eventhouse - in preview) in Microsoft Fabric.
-6. Go back to the Event Stream and add the KQL Database as a **Destination**.
+2. **Event Hub**
+3. **Eventstream**
+4. **Eventhouse** / **KQL DB**
     - Create a new table
-7. Wait for the ingestion to start.
 
 ## Get insights by using KQL
 
@@ -37,16 +36,15 @@ Create KQL queries that help you to:
 
 ## Create a Power BI Report 
 
-1. Use Power Desktop to connect to datasource Azure Data Explorer. Leverage DirectQuery.
-2. Use the query from task 6 (see previous) as the input, and make sure to select "DirectQuery"
-3. Add a Map visual to the report page, displaying ISS location
+1. Use Power Desktop or Fabric.
+2. Leverage a Map Visual.
 4. Configure Auto Page Refresh in Power BI Desktop.
-5. Publish the report to your Fabric Workspace and validate that the report refreshes automatically. Try to get it refreshed every second.
+5. Publish / Validate in Fabric.
 
 
-## Optional: When is ISS flying over my location?
+## Optional: Create a Dashboard
 
-Optional excercise (challenge!): Let's send a notification every time the ISS is in a range close to where you live. You can try Microsoft Fabric Reflex, Power BI, ...
+Optional excercise (challenge!): In conjunction with your report, create a dashboard that will update in RT.
 
 ## Supporting links
 - [Stream real-time events from a custom app to a Microsoft Fabric KQL database](https://learn.microsoft.com/fabric/real-time-analytics/event-streams/stream-real-time-events-from-custom-app-to-kusto)
