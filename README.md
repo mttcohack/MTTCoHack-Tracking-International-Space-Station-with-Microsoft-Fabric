@@ -12,7 +12,8 @@ You will need contributor access to an Azure Subscription and a Microsoft Fabric
 
 ## Set up the resources
 
-<img width="1184" alt="Drawing" src="https://github.com/user-attachments/assets/ca2b0cd8-66a5-4637-bcc4-71e5cd4490e1" />
+<img width="1184" alt="Drawing" src="https://github.com/user-attachments/assets/502e8224-7283-49b2-a245-5ab48b9ab046" />
+
 
 1. **Azure Logic App** (consumption tier)
     - Set up a recurring trigger every 10 seconds
