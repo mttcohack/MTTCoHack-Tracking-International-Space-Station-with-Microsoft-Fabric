@@ -39,7 +39,7 @@ Create KQL queries that help you to:
 
 1. Use Power Desktop or Fabric.
 2. Leverage a Map Visual.
-4. Configure Auto Page Refresh in Power BI Desktop.
+4. Configure Auto Page Refresh.
 5. Publish / Validate in Fabric.
 
 
